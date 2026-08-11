@@ -1,0 +1,15 @@
+Premium Custom Emoji + Reply Keyboard
+=====================================
+The original IDs are preserved:
+START    5935946026308342844
+SUPPORT  5938359183748370657
+ADMIN    5935933089866846598
+CHAPTER  5938069973535559743
+
+The button text does NOT contain emoji. Telegram receives:
+KeyboardButton(text="شروع یادگیری", icon_custom_emoji_id=..., style="success")
+and equivalent buttons for support/admin.
+
+aiogram 3.30.0 exposes KeyboardButton.style and KeyboardButton.icon_custom_emoji_id.
+The bot intentionally does not use InlineKeyboardMarkup.
+Telegram's Bot API 9.4+ requires the bot/owner to be eligible to use custom emoji.
